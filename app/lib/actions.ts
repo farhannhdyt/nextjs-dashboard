@@ -118,6 +118,7 @@ export async function updateInvoice(id: string, prevState: State, formData: Form
     `;
   } catch(error) {
     // If a database error occurs, return a more specific error.
+    console.error(error);
     return { message: 'Database Error: Failed to Update Invoice.' };
   }
 
